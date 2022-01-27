@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <header class="page-header">
+        <h1>Product Add</h1>
+    </header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="Script.js"></script>
+               
+
+       
+<script type="text/javascript">
+    
+    function populate(s1,s2){
+
+        var s1 = document.getElementById(s1);
+        var s2 = document.getElementById(s2);
+
+        var e = document.getElementById('#product_form');
+       
+        var strUser = e.value;
+       
+
+        if(s1.value == "dvd" ){
+            if(document.getElementById('#weight')){
+                var weight = document.getElementById('#weight');
+                weight.parentNode.removeChild(weight);
+            }
+            if(document.getElementById('#height')){
+                var height= document.getElementById('#height');
+                height.parentNode.removeChild(height);
+            }
+            if(document.getElementById('#length')){
+                var length= document.getElementById('#length');
+                length.parentNode.removeChild(length);
+            }
+            if(document.getElementById('#width')){
+                var width= document.getElementById('#width');
+                width.parentNode.removeChild(width);
+            }
+
+
+            if(!document.getElementById('#size')){
+            let div = document.createElement('div');
+            div.setAttribute("class","mb-3");
+            div.setAttribute("id", "#size");
+            div.setAttribute("name", "size");
+            
+            
+
+
+            let label = document.createElement('label');
+            label.setAttribute("class", "form-label");
+            label.setAttribute("for", "size");
+            label.textContent = "Size";
+
+
+            let input = document.createElement('input');
+            input.setAttribute("class", "form-control");
+            input.setAttribute("id", "#size");
+            input.setAttribute("placeholder", "Size");
+            input.setAttribute("name", "size");
+            
+
+
+            div.append(label, input);
+            document.getElementById('#product_form').appendChild(div);
+            }
+        }
+
+        
+        if(s1.value == "book"){
+            if(document.getElementById('#size')){
+                var size = document.getElementById('#size');
+                size.parentNode.removeChild(size);
+            }
+
+            if(document.getElementById('#length')){
+                var length= document.getElementById('#length');
+                length.parentNode.removeChild(length);
+            }
+            if(document.getElementById('#width')){
+                var width= document.getElementById('#width');
+                width.parentNode.removeChild(width);
+            }
+
+            if(document.getElementById('#height')){
+                var height= document.getElementById('#height');
+                height.parentNode.removeChild(height);
+            }
+
+            if(!document.getElementById('#weight')){
+            let div = document.createElement('div');
+            div.setAttribute("class","mb-3");
+            div.setAttribute("id","#weight");   
+
+            let label = document.createElement('label');
+            label.setAttribute("class", "form-label");
+            label.setAttribute("for", "weight");
+            label.setAttribute("id", "#weight");
+            label.textContent = "Weight";
+
+            let input = document.createElement('input');
+            input.setAttribute("class", "form-control");
+            input.setAttribute("id", "#weight");
+            input.setAttribute("name", "weight");
+            input.setAttribute("placeholder", "Weight");
+
+            div.append(label, input);
+            document.getElementById('#product_form').appendChild(div);
+            }
+
+
+            
+        }
+
+        if(s1.value == "furniture"){
+            if(document.getElementById('#size')){
+                var size = document.getElementById('#size');
+                size.parentNode.removeChild(size);
+            }
+
+            if(document.getElementById('#weight')){
+                var weight = document.getElementById('#weight');
+                weight.parentNode.removeChild(weight);
+            }
+
+            if(!document.getElementById('#height')){
+            let div = document.createElement('div');
+            div.setAttribute("class","mb-3");
+            div.setAttribute("id", "#height");
+            div.setAttribute("name", "height");
+            
+
+            let label = document.createElement('label');
+            label.setAttribute("class", "form-label");
+            label.setAttribute("for", "Height");
+            label.setAttribute("id", "#Height");
+            label.textContent = "Height";
+
+            let input = document.createElement('input');
+            input.setAttribute("class", "form-control");
+            input.setAttribute("id", "height");
+            input.setAttribute("placeholder", "Height");
+            input.setAttribute("name", "height");
+
+            div.append(label, input);
+            document.getElementById('#product_form').appendChild(div);
+            }
+
+            if(!document.getElementById('#length')){
+            let div = document.createElement('div');
+            div.setAttribute("class","mb-3");
+            div.setAttribute("id", "#length");
+            div.setAttribute("name", "length");
+            
+            let label = document.createElement('label');
+            label.setAttribute("class", "form-label");
+            label.setAttribute("for", "length");
+            label.textContent = "Length";
+
+            let input = document.createElement('input');
+            input.setAttribute("class", "form-control");
+            input.setAttribute("id", "#length");
+            input.setAttribute("placeholder", "Length");
+            input.setAttribute("name", "length");
+
+            div.append(label, input);
+            document.getElementById('#product_form').appendChild(div);
+            }
+
+
+            if(!document.getElementById('#width')){
+            let div = document.createElement('div');
+            div.setAttribute("class","mb-3");
+            div.setAttribute("id","#width");
+
+            let label = document.createElement('label');
+            label.setAttribute("class", "form-label");
+            label.setAttribute("for", "width");
+            label.setAttribute("id", "#width");
+            label.textContent = "Width";
+
+            let input = document.createElement('input');
+            input.setAttribute("class", "form-control");
+            input.setAttribute("id", "#width");
+            input.setAttribute("name", "width");
+            input.setAttribute("placeholder", "Width");
+
+            div.append(label, input);
+            document.getElementById('#product_form').appendChild(div);
+            }
+
+
+
+            
+        }
+
+
+    }
+
+    
+
+    
+</script>
+
+<style>
+    .button2 {
+          border: none;
+          color: rgb(10, 0, 0);
+          padding: 10px 25px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 10px;
+          position: relative;
+          cursor: pointer;
+        }
+</style>
+</head>
+<body>
+    <div id="error"></div>
+    <form action ="connection.php" method="POST" id="#product_form" >
+    <div id="#product_form" class="" style="width:50%; margin: 0 auto;">
+        
+        <div class="mb-3">
+            <label for="SKU" class="form-label">SKU</label>
+            <input type="SKU" class="form-control" id="sku" placeholder="Sku" name="sku">
+          </div>
+          <div class="mb-3">
+            <label for="Name" class="form-label">Name</label>
+            <input type="Name" class="form-control" id="name" placeholder="Name" name="name">
+          </div>
+          <div class="mb-3">
+            <label for="Price" class="form-label">Price</label>
+            <input type="Price" class="form-control" id="price" placeholder="Price" name="price">
+          </div>
+    </div>
+
+    <div class="switcher mb-3" style="width:50%; margin:0 auto;">
+        <select name="format" id="#productType" onchange="populate(this.id,'discp')">
+            <option  selected disabled>Choose product type</option>
+            <option value="book">Book</option> 
+            <option value="dvd">DVD</option>
+            <option value="furniture">Furniture</option>
+        </select>
+        
+        <!--save button -->
+
+        
+
+       
+        <button type="submit" class="btn btn-outline-primary">Save</button>
+    
+    </form>
+        
+
+<!-- Cancel button -->
+<a href="index.html"><button type="button" class="btn btn-outline-primary">Cancel</button></a>
+    </div>
+
+</body>
+</html>
